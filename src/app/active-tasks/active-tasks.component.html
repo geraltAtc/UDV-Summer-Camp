@@ -1,0 +1,84 @@
+<div class="active-tasks">
+  <h2>Актуальные заметки</h2>
+
+  <!-- Сообщение об отсутствии заметок -->
+  @if (todoService.items().length === 0 && !showInput) {
+    <p class="no-items-message">Заметки отсутствуют</p>
+  }
+
+  <!-- Кнопка "Добавить заметку" -->
+  @if (!showInput) {
+    <button class="btn-primary" (click)="showInput = true">Добавить заметку</button>
+  }
+
+  <!-- Поле ввода и кнопки (отображается над списком, если заметок нет) -->
+  @if (showInput && todoService.items().length === 0) {
+    <div class="add-item-container">
+      <div class="add-item-actions">
+        <button class="btn-icon" (click)="addItem()">
+					<i class="fas fa-check"></i>
+				</button>
+        <button class="btn-icon btn-warn" (click)="cancelAdd()">
+					<i class="fas fa-close"></i>
+				</button>
+      </div>
+      <input
+        [(ngModel)]="newItemDescription"
+        placeholder="Введите текст заметки"
+        class="lg-text-input"
+      />
+    </div>
+  }
+
+  <!-- Список задач -->
+  <ul>
+    @for (item of todoService.items(); track item) {
+      <li>
+        <app-item (remove)="removeItem(item)" [item]="item"></app-item>
+      </li>
+    }
+  </ul>
+
+  <!-- Поле ввода и кнопки (отображается под списком, если заметки есть) -->
+  @if (showInput && todoService.items().length > 0) {
+    <div class="add-item-container">
+      <div class="add-item-actions">
+        <button class="btn-icon" (click)="addItem()">
+					<i class="fas fa-check"></i>
+				</button>
+        <button class="btn-icon btn-warn" (click)="cancelAdd()">
+					<i class="fas fa-close"></i>
+				</button>
+      </div>
+      <input
+        [(ngModel)]="newItemDescription"
+        placeholder="Введите текст заметки"
+        class="lg-text-input"
+      />
+    </div>
+  }
+
+  <!-- Кнопки фильтрации -->
+  <!-- <div class="btn-wrapper">
+    <button
+      class="btn btn-menu"
+      [class.active]="todoService.filter() === 'all'"
+      (click)="todoService.filter.set('all')">
+      Все
+    </button>
+
+    <button
+      class="btn btn-menu"
+      [class.active]="todoService.filter() === 'active'"
+      (click)="todoService.filter.set('active')">
+      Актуальные
+    </button>
+
+    <button
+      class="btn btn-menu"
+      [class.active]="todoService.filter() === 'done'"
+      (click)="todoService.filter.set('done')">
+      Завершённые
+    </button>
+  </div> -->
+</div>

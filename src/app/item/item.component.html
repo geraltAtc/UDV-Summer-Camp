@@ -1,0 +1,40 @@
+<div class="item">
+  <!-- <input
+    [id]="item.description"
+    type="checkbox"
+    (change)="item.done = !item.done"
+    [checked]="item.done" />
+  <label [for]="item.description">{{ item.description }}</label> -->
+
+<!-- Режим чтения -->
+@if (!editable) {
+	<label [for]="item.description">{{ item.description }}</label>
+	<div class="btn-wrapper">
+		<button class="btn-icon" (click)="startEdit()">
+			<i class="fas fa-pencil-alt"></i> <!-- Иконка карандаша -->
+		</button>
+		<button class="btn-icon btn-warn" (click)="remove.emit()">
+			<i class="fas fa-trash"></i> <!-- Иконка корзины -->
+		</button>
+	</div>
+}
+
+<!-- Режим редактирования -->
+@if (editable) {
+	<div class="edit-container">
+		<input
+			class="sm-text-input"
+			placeholder="Редактировать заметку"
+			[(ngModel)]="editText"
+			(keyup.enter)="saveEdit()" />
+		<div class="btn-wrapper">
+			<button class="btn-icon" (click)="saveEdit()">
+				<i class="fas fa-check"></i> <!-- Иконка галочки -->
+			</button>
+			<button class="btn-icon btn-warn" (click)="cancelEdit()">
+				<i class="fas fa-times"></i> <!-- Иконка крестика -->
+			</button>
+		</div>
+	</div>
+}
+</div>

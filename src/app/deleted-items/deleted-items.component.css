@@ -1,0 +1,94 @@
+.deleted-items {
+  margin-top: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.btn-restore {
+	background: none;
+  border: 2px solid gray;
+	border-radius: 20%;
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+  transition: color 0.3s ease;
+  padding: 8px;
+}
+
+.btn-restore:hover {
+	transition: all .5s ease;
+  background-color: #007bff;
+}
+
+.btn-delete {
+	background: none;
+  border: 2px solid gray;
+	border-radius: 20%;
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+  transition: color 0.3s ease;
+  padding: 8px;
+}
+
+.btn-delete:hover {
+	transition: all .5s ease;
+  background-color: #007bff;
+}
+
+.btn-warn:hover {
+  color: #f44336;
+}
+
+.btn-clear-all {
+  background-color: #ff4444;
+	color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.btn-clear-all:hover {
+  background-color: #cc0000;
+}
+
+.no-items-message {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+.deleted-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.deleted-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.item-description {
+  flex-grow: 1;
+}
+
+.item-actions {
+  display: flex;
+  gap: 10px;
+}

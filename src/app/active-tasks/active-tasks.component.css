@@ -1,0 +1,74 @@
+.active-tasks {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.lg-text-input {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.btn-wrapper {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.btn-menu {
+	width: 100%;
+}
+
+.add-item-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.add-item-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-icon {
+	background: none;
+  border: 2px solid gray;
+	border-radius: 20%;
+  cursor: pointer;
+  font-size: 20px;
+  color: #666;
+  transition: color 0.3s ease;
+  padding: 8px;
+	margin-bottom: 0.4em;
+}
+
+.btn-icon:hover {
+  background-color: #007bff;
+}
+
+.btn-warn:hover {
+  color: #f44336;
+}

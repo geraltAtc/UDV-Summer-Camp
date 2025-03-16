@@ -1,0 +1,28 @@
+<div class="deleted-items">
+  <button class="btn-clear-all" (click)="clearAllItems()">Очистить</button>
+
+  <!-- Сообщение об отсутствии удалённых заметок -->
+  @if (todoService.deletedItems().length === 0) {
+    <p class="no-items-message">Нет удалённых заметок.</p>
+  }
+
+  <!-- Список удалённых заметок -->
+  <ul class="deleted-list">
+    @for (item of todoService.deletedItems(); track item) {
+      <li class="deleted-item">
+        <span class="item-description">{{ item.description }}</span>
+        <div class="item-actions">
+          <!-- Иконка восстановления -->
+          <button class="btn-restore" (click)="restoreItem(item)">
+            <i class="fas fa-reply"></i>
+          </button>
+
+          <!-- Иконка безвозвратного удаления -->
+          <button class="btn-delete btn-warn" (click)="permanentlyDeleteItem(item)">
+            <i class="fas fa-trash"></i>
+          </button>
+        </div>
+      </li>
+    }
+  </ul>
+</div>
