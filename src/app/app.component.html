@@ -16,48 +16,5 @@
       Удаленные
     </a>
   </div>
-
-  <!-- <input
-    #newItem
-    placeholder="add an item"
-    (keyup.enter)="addItem(newItem.value); newItem.value = ''"
-    class="lg-text-input"
-    id="addItemInput"
-  />
-
-  <button class="btn-primary" (click)="addItem(newItem.value)">Add</button> -->
-
-  <!-- Кнопки, которые меняют отображение элементов на все, только активные или только выполненные -->
-  <!-- <div class="btn-wrapper">
-    <button
-      class="btn btn-menu"
-      [class.active]="filter() === 'all'"
-      (click)="filter.set('all')">
-      All
-    </button>
-
-    <button
-      class="btn btn-menu"
-      [class.active]="filter() === 'active'"
-      (click)="filter.set('active')">
-      To Do
-    </button>
-
-    <button
-      class="btn btn-menu"
-      [class.active]="filter() === 'done'"
-      (click)="filter.set('done')">
-      Done
-    </button>
-  </div>
-
-  <h2>
-    {{ items().length }}
-    @if (items().length === 1) {
-      <span>item</span>
-    } @else {
-      <span>items</span>
-    }
-  </h2> -->
   <router-outlet></router-outlet>
 </div>

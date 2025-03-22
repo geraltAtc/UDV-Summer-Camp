@@ -1,20 +1,13 @@
 <div class="item">
-  <!-- <input
-    [id]="item.description"
-    type="checkbox"
-    (change)="item.done = !item.done"
-    [checked]="item.done" />
-  <label [for]="item.description">{{ item.description }}</label> -->
-
 <!-- Режим чтения -->
 @if (!editable) {
 	<label [for]="item.description">{{ item.description }}</label>
 	<div class="btn-wrapper">
 		<button class="btn-icon" (click)="startEdit()">
-			<i class="fas fa-pencil-alt"></i> <!-- Иконка карандаша -->
+			<i class="fas fa-pencil-alt"></i>
 		</button>
 		<button class="btn-icon btn-warn" (click)="remove.emit()">
-			<i class="fas fa-trash"></i> <!-- Иконка корзины -->
+			<i class="fas fa-trash"></i>
 		</button>
 	</div>
 }
@@ -29,10 +22,10 @@
 			(keyup.enter)="saveEdit()" />
 		<div class="btn-wrapper">
 			<button class="btn-icon" (click)="saveEdit()">
-				<i class="fas fa-check"></i> <!-- Иконка галочки -->
+				<i class="fas fa-check"></i>
 			</button>
 			<button class="btn-icon btn-warn" (click)="cancelEdit()">
-				<i class="fas fa-times"></i> <!-- Иконка крестика -->
+				<i class="fas fa-times"></i>
 			</button>
 		</div>
 	</div>

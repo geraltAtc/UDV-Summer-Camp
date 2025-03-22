@@ -29,13 +29,13 @@ export class ItemComponent {
   saveEdit() {
     if (this.editText.trim()) {
       this.item.description = this.editText; // Обновляем текст заметки
-      this.todoService.updateItemDescription(this.item, this.editText); // Сохраняем изменения
-      this.editable = false; // Возвращаемся в режим чтения
+      this.todoService.updateItemDescription(this.item, this.editText);
+      this.editable = false;
     }
   }
 
   // Метод для отмены редактирования
   cancelEdit() {
-    this.editable = false; // Возвращаемся в режим чтения
+    this.editable = false;
   }
 }

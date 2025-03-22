@@ -16,7 +16,7 @@ import { FormsModule } from '@angular/forms';
 export class ActiveTasksComponent {
 	showInput = false; // Состояние для отображения поля ввода
   newItemDescription = ''; // Текст новой заметки
-  constructor(public todoService: TodoService) {} // Внедряем сервис
+  constructor(public todoService: TodoService) {}
 
   // Метод для удаления задачи
   removeItem(item: Item) {

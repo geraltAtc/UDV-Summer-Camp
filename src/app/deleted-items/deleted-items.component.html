@@ -12,12 +12,9 @@
       <li class="deleted-item">
         <span class="item-description">{{ item.description }}</span>
         <div class="item-actions">
-          <!-- Иконка восстановления -->
           <button class="btn-restore" (click)="restoreItem(item)">
             <i class="fas fa-reply"></i>
           </button>
-
-          <!-- Иконка безвозвратного удаления -->
           <button class="btn-delete btn-warn" (click)="permanentlyDeleteItem(item)">
             <i class="fas fa-trash"></i>
           </button>

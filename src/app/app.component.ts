@@ -15,7 +15,6 @@ export class AppComponent {
   filter = signal<'all' | 'active' | 'done'>('all');
   allItems = signal<Item[]>([]);
   deletedItems = signal<Item[]>([]);
-  // showDeleted = signal(false);
 
   items = computed(() => {
     const filter = this.filter();
